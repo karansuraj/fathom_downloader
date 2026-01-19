@@ -1,5 +1,5 @@
 {
-  "name": "fathomfinder",
+  "name": "famthom_downloader",
   "private": true,
   "version": "1.0.0",
   "description": "Fathom Transcript Bulk Exporter",
@@ -9,11 +9,13 @@
     "node": ">=18"
   },
   "dependencies": {
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "fuzzysort": "^2.0.4"
   },
   "scripts": {
     "download": "node download-transcripts.js",
-    "search": "node search-transcripts.js"
+    "search": "node search-transcripts.js",
+    "fuzzy": "node search-transcripts.js --fuzzy"
   }
 }
 
