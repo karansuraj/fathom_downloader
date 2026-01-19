@@ -6,7 +6,8 @@
  * Downloads all transcripts from your Fathom account.
  * 
  * Usage:
- *   FATHOM_API_KEY=your_key node download-transcripts.js
+ *   1) Create a ".env" file with FATHOM_API_KEY
+ *   2) node download-transcripts.js
  * 
  * Options (via env vars):
  *   FATHOM_API_KEY     - Required. Get from https://fathom.video/customize#api-access-header
@@ -34,7 +35,8 @@ const CREATED_BEFORE = process.env.CREATED_BEFORE;
 const RATE_LIMIT_DELAY_MS = 1100;
 
 if (!API_KEY) {
-  console.error('Error: FATHOM_API_KEY environment variable is required');
+  console.error('Error: FATHOM_API_KEY is required (set it in your .env file)');
+  console.error('Example: echo "FATHOM_API_KEY=your_key_here" > .env');
   console.error('Get your API key from: https://fathom.video/customize#api-access-header');
   process.exit(1);
 }
